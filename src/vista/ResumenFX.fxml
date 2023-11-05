@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="965.0" style="-fx-background-color: #F4F6F6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ResumenC">
+   <children>
+      <Label layoutX="42.0" layoutY="31.0" text="Balance del día">
+         <font>
+            <Font name="Verdana Bold" size="36.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cbox_tienda" focusColor="BLACK" layoutX="51.0" layoutY="126.0" prefHeight="39.0" prefWidth="168.0" promptText="Seleccionar tienda" unFocusColor="BLACK" />
+      <DatePicker fx:id="dp_fecha" layoutX="333.0" layoutY="146.0" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: #E5E7E9;" />
+      <Pane layoutX="52.0" layoutY="242.0" prefHeight="115.0" prefWidth="200.0" style="-fx-background-color: #E5E7E9;">
+         <children>
+            <Label layoutX="99.0" layoutY="23.0" text="Ventas">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_ventas" layoutX="117.0" layoutY="58.0" text="224">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="70.0" fitWidth="67.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../bin/img/contar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="297.0" layoutY="236.0" prefHeight="394.0" prefWidth="358.0" style="-fx-background-color: #E5E7E9;">
+         <children>
+            <PieChart fx:id="pc_venta" layoutX="18.0" layoutY="5.0" prefHeight="351.0" prefWidth="324.0" title="Lo más vendido" />
+         </children>
+      </Pane>
+      <Pane layoutX="52.0" layoutY="405.0" prefHeight="115.0" prefWidth="200.0" style="-fx-background-color: #E5E7E9;">
+         <children>
+            <Label layoutX="86.0" layoutY="13.0" text="Ingresos">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_ingresos" layoutX="106.0" layoutY="58.0" text="3125">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="67.0" fitWidth="55.0" layoutX="14.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../bin/img/moneda.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXButton layoutX="80.0" layoutY="569.0" style="-fx-background-color: #E5E7E9;" text="Ver detalles">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </JFXButton>
+      <Line endX="205.0703125" endY="-1.0" layoutX="143.0" layoutY="78.0" startX="-142.0" startY="-1.0" />
+      <Pane fx:id="pane3" layoutX="691.0" layoutY="236.0" prefHeight="394.0" prefWidth="232.0" style="-fx-background-color: #E5E7E9;">
+         <children>
+            <TableView fx:id="tabla_bajo_stock" layoutX="28.0" layoutY="55.0" prefHeight="327.0" prefWidth="177.0" stylesheets="@../css/estilos.css">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+            <Label layoutX="59.0" layoutY="14.0" text="Bajo stock">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

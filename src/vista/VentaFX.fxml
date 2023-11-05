@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="965.0" style="-fx-background-color: #F4F6F6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VentaC">
+   <children>
+      <Label layoutX="53.0" layoutY="30.0" text="Venta">
+         <font>
+            <Font name="Verdana Bold" size="36.0" />
+         </font>
+      </Label>
+      <Line endX="16.4921875" endY="-1.0" layoutX="154.0" layoutY="77.0" startX="-153.0" startY="-1.0" />
+      <Pane layoutX="52.0" layoutY="130.0" prefHeight="551.0" prefWidth="532.0" style="-fx-background-color: #E5E7E9;">
+         <children>
+            <TableView fx:id="tabla_venta_detalle" layoutX="27.0" layoutY="127.0" prefHeight="310.0" prefWidth="475.0" stylesheets="@../css/estilos.css">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Tipo" />
+                <TableColumn prefWidth="75.0" text="Nombre" />
+                  <TableColumn prefWidth="75.0" text="Cantidad" />
+                  <TableColumn prefWidth="75.0" text="Subtotal" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <TextField fx:id="field_cantidad" layoutX="27.0" layoutY="69.0" prefHeight="39.0" prefWidth="219.0" promptText="Ingresa la cantidad">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="btn_agregar_indumentaria" layoutX="269.0" layoutY="69.0" onAction="#agregarVentaDetalle" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: #2980B9;" text="Agregar">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn_seleccionar_indumentaria" layoutX="27.0" layoutY="21.0" onAction="#ventanaSeleccionarIndumentaria" style="-fx-background-color: #BDC3C7;" text="Seleccionar camiseta">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn_seleccionar_cliente" layoutX="27.0" layoutY="485.0" onAction="#ventanaSeleccionarCliente" prefHeight="30.0" prefWidth="146.0" style="-fx-background-color: #BDC3C7;" text="Seleccionar cliente">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="14.0" layoutY="529.0" text="Es necesario seleccionar un cliente para generar el comprobante de pago." />
+            <TextField fx:id="field_indumentaria_seleccionada" layoutX="192.0" layoutY="21.0" prefHeight="30.0" prefWidth="310.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="field_cliente_seleccionado" layoutX="192.0" layoutY="485.0" prefHeight="30.0" prefWidth="310.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="btn_quitar_indumentaria" layoutX="396.0" layoutY="69.0" onAction="#quitarVentaDetalle" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: #2980B9;" text="Quitar">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXCheckBox fx:id="check_comprobante" layoutX="28.0" layoutY="453.0" onAction="#conComprobante" text="Generar comprobante de pago">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXCheckBox>
+         </children>
+      </Pane>
+      <Pane fx:id="contenedor_tienda_trabajador" layoutX="631.0" layoutY="130.0" prefHeight="551.0" prefWidth="290.0" style="-fx-background-color: #E5E7E9;">
+         <children>
+            <ImageView fitHeight="136.0" fitWidth="146.0" layoutX="77.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/usuario.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="label_trabajador_nombre" alignment="CENTER" layoutY="407.0" prefHeight="25.0" prefWidth="290.0" text="Nombre">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btn_procesar_venta" layoutX="47.0" layoutY="488.0" onAction="#validarRegistrarVenta" prefHeight="39.0" prefWidth="195.0" style="-fx-background-color: #2980B9;" text="Registrar venta">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="70.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/tienda.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="label_tienda_piso" alignment="CENTER" layoutY="189.0" prefHeight="25.0" prefWidth="290.0" text="Piso">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_trabajador_apellido" alignment="CENTER" layoutY="432.0" prefHeight="25.0" prefWidth="290.0" text="Apellido">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_tienda_galeria" alignment="CENTER" layoutY="164.0" prefHeight="25.0" prefWidth="290.0" text="Galería">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_tienda_stand" alignment="CENTER" layoutY="214.0" prefHeight="25.0" prefWidth="290.0" text="Stand">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="721.0" prefWidth="694.0" style="-fx-background-color: #F4F6F6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.AgregarClienteC">
+   <children>
+      <Pane layoutX="40.0" layoutY="101.0" prefHeight="579.0" prefWidth="614.0" style="-fx-background-color: #BDC3C7;">
+         <children>
+            <TextField fx:id="field_nombre" layoutX="171.0" layoutY="113.0" prefHeight="40.0" prefWidth="294.0">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="24.0" layoutY="118.0" text="Nombre:*">
+               <font>
+                  <Font name="Segoe UI" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="field_apellido_paterno" layoutX="171.0" layoutY="181.0" prefHeight="40.0" prefWidth="294.0">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="23.0" layoutY="186.0" text="Apellido P.:">
+               <font>
+                  <Font name="Segoe UI" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="field_apellido_materno" layoutX="171.0" layoutY="250.0" prefHeight="40.0" prefWidth="294.0">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="24.0" layoutY="255.0" text="Apellido M.:">
+               <font>
+                  <Font name="Segoe UI" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="field_telefono" layoutX="171.0" layoutY="320.0" prefHeight="40.0" prefWidth="294.0">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="23.0" layoutY="325.0" text="Teléfono:">
+               <font>
+                  <Font name="Segoe UI" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btn_agregar_modificar" layoutX="171.0" layoutY="459.0" onAction="#agregarModificar" style="-fx-background-color: #2980B9;" text="Agregar/Modificar">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="15.0" layoutY="498.0" style="-fx-background-color: #F4F6F6;" text="Cancelar">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="field_documento" layoutX="171.0" layoutY="45.0" prefHeight="40.0" prefWidth="294.0">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="24.0" layoutY="50.0" text="DNI/RUC:*">
+               <font>
+                  <Font name="Segoe UI" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="field_direccion" layoutX="171.0" layoutY="390.0" prefHeight="40.0" prefWidth="294.0">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="23.0" layoutY="395.0" text="Dirección:">
+               <font>
+                  <Font name="Segoe UI" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btn_consultar_documento" layoutX="474.0" layoutY="45.0" onAction="#consultarDocumento" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #F4F6F6;" styleClass="btn_consultar_documento" stylesheets="@../css/estilos.css" text=" ">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Label fx:id="label_agregar_modificar" layoutX="14.0" layoutY="27.0" text="Agregar/Modificar cliente">
+         <font>
+            <Font name="Verdana Bold" size="24.0" />
+         </font>
+      </Label>
+      <Line endX="210.0" endY="-2.0" layoutX="151.0" layoutY="66.0" startX="-150.0" startY="-2.0" />
+   </children>
+</Pane>

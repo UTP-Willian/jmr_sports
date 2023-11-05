@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="965.0" style="-fx-background-color: #F4F6F6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.StockC">
+   <children>
+      <Label layoutX="42.0" layoutY="30.0" text="Stock">
+         <font>
+            <Font name="Verdana Bold" size="36.0" />
+         </font>
+      </Label>
+      <Line endX="11.025390625" endY="-1.0" layoutX="143.0" layoutY="77.0" startX="-142.0" startY="-1.0" />
+      <TableView fx:id="tabla_indumentaria" layoutY="225.0" prefHeight="495.0" prefWidth="965.0" stylesheets="@../css/estilos.css">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Tipo" />
+          <TableColumn prefWidth="75.0" text="Nombre" />
+            <TableColumn prefWidth="75.0" text="Talla" />
+            <TableColumn prefWidth="75.0" text="Precio" />
+            <TableColumn prefWidth="75.0" text="Cantidad" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXButton fx:id="btn_buscar" layoutX="359.0" layoutY="159.0" onAction="#buscarIndumentaria" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: #E5E7E9;" text="Buscar">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font></JFXButton>
+      <TextField fx:id="field_buscar" layoutX="42.0" layoutY="159.0" prefHeight="39.0" prefWidth="294.0" promptText="Ingresa el valor del campo">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btn_agregar" layoutX="528.0" layoutY="159.0" onAction="#agregarIndumentaria" style="-fx-background-color: #2980B9;" text="Agregar indumentaria">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn_modificar" layoutX="802.0" layoutY="159.0" onAction="#modificarIndumentaria" prefHeight="39.0" prefWidth="130.0" style="-fx-background-color: #E5E7E9;" text="Modificar">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cbox_buscar" layoutX="42.0" layoutY="111.0" prefHeight="25.0" prefWidth="261.0" promptText="Selecciona el campo" />
+      <JFXButton fx:id="btn_eliminar" layoutX="802.0" layoutY="97.0" onAction="#eliminarIndumentaria" prefHeight="39.0" prefWidth="130.0" style="-fx-background-color: #E5E7E9;" text="Eliminar">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</Pane>
